@@ -1,0 +1,7 @@
+services:
+  rest_service_d8.service.configuration:
+    class: Drupal\rest_service_d8\Configuration\MigrateD8ServicesConfiguration
+  rest_service_d8.rest.endpoint.call:
+    class: Drupal\rest_service_d8\Services\RestServiceD8Json
+    arguments:
+      - '@rest_service_d8.service.configuration'

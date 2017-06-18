@@ -1,0 +1,18 @@
+rest_service_d8.config.rest:
+  route_name: rest_service_d8.config.rest
+  title: 'Rest Service D8'
+  parent: system.admin_config
+  description: 'Rest Service D8 related configuration.'
+  weight: -5
+rest_service_d8.config.course.dates:
+  title: 'Rest Service D8 Course Dates'
+  parent: rest_service_d8.config.rest
+  description: 'Configure course dates range for REST call to pull in.'
+  route_name: rest_service_d8.config.course.dates
+  weight: -9
+rest_service_d8.config.rest.credentials:
+  title: ' REST Service D8 Credentials'
+  parent: rest_service_d8.config.rest
+  description: 'Configure REST Service D8 endpoint and credentials.'
+  route_name: rest_service_d8.config.rest.credentials
+  weight: -20

@@ -1,0 +1,7 @@
+name: Rest Service D8
+type: module
+description: 'REST Service D8 Api call for Migrate D8 migration'
+package: Migrate D8
+core: '8.x'
+dependencies:
+  - migrate_d8

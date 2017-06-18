@@ -1,0 +1,30 @@
+rest_service_d8.rest.services:
+  path: /rest-services-d8/{service}
+  defaults:
+    _controller: Drupal\rest_service_d8\Controller\RestServiceD8Display::displayRestData
+  requirements:
+    _custom_access: Drupal\rest_service_d8\Controller\RestServiceD8Display::access
+
+rest_service_d8.config.rest:
+  path: '/admin/config/rest-service-d8'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Rest Services D8'
+  requirements:
+    _permission: 'access administration pages'
+
+rest_service_d8.config.course.dates:
+  path: '/admin/config/rest-service-d8/course-dates'
+  defaults:
+    _form: 'Drupal\rest_service_d8\Form\RestServiceD8CourseDatesForm'
+    _title: 'Rest Service D8 Course Dates'
+  requirements:
+    _permission: 'access administration pages'
+
+rest_service_d8.config.rest.credentials:
+  path: '/admin/config/rest-service-d8/rest-credentials'
+  defaults:
+    _form: 'Drupal\rest_service_d8\Form\RestServiceD8RestCredentialsForm'
+    _title: 'REST Credentials'
+  requirements:
+    _permission: 'access administration pages'
